@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/reveal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/theme/night.css" id="theme">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.js"></script>    
@@ -9,14 +10,63 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section><h1>Hello World</h1></section>
+            <section>
+                <h2>Сортировка палитры</h2>
+            </section>
+            <section>
+                <p>
+                    Embedding: 
+                    <ul>
+                        <li>Original Palette = JPEG* &rarr; Indexed &rarr; Original Palette</li>
+                        <li>Palette = Original Palette &otimes; Message</li>
+                    </ul>
+                </p>
+                <p>
+                    Detection: 
+                    <ul>
+                        <li>Palette = Indexed &rarr; Palette</li>
+                        <li>Original Palette = Indexed &rarr; JPEG* &rarr; Original Palette</li>
+                        <li>Message = Original Palette &otimes; Palette</li>
+                    </ul>
+                </p>
+                <small>
+                    <p>JPEG* в данном случае подразумевает не сжатие а только преобразование в "нормальный" вид</p>
+                </small>
+            </section>
+            <section>
+                <p>
+                    Embedding: 
+                    <ul>
+                        <li>Original Palette = Indexed &rarr; Palette &rarr; <b><i>Sort</i></b></li>
+                        <li>Palette = Original Palette &otimes; Message</li>
+                    </ul>
+                </p>
+                <p>
+                    Detection: 
+                    <ul>
+                        <li>Palette = Indexed &rarr; Palette</li>
+                        <li>Original Palette = Palette &rarr; <b><i>Sort</i></b></li>
+                        <li>Message = Original Palette &otimes; Palette</li>
+                    </ul>
+                </p>
+            </section>
             <section>
                 <section>
-                    Vertical Slide 1
-                    <img src="content/color.png" alt="">
+                    <img class="stretch" src="content/palette_rgb3.png" alt="">
                 </section>
                 <section>
-                    <img src="content/palette_rgb.png" alt="">
+                    <img class="stretch" src="content/palette_color3.png" alt="">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <img class="stretch" src="content/color.png" alt="">
+                </section>
+                <section>
+                    <img class="stretch" src="content/image_palette_rgb.png" alt="">
+                </section>
+                <section>
+                    <img class="stretch" src="content/image_palette_color.png" alt="">
                 </section>
             </section>
         </div>
